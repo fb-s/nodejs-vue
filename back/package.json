@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-vue-backend",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "knex": "knex --knexfile src/database/knexfile.js",
+    "migrate": "npm run knex migrate:latest",
+    "seed": "npm run knex seed:run",
+    "db:init": "node src/database/init-db.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
